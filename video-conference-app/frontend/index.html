@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Conference Room</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Video Conference Room</h1>
+        <div id="room-controls">
+            <input type="text" id="room-id" placeholder="Enter Room ID" />
+            <button id="join-room">Join Room</button>
+            <button id="create-room">Create Room</button>
+        </div>
+        <div id="video-container">
+            <video id="local-video" autoplay muted></video>
+            <div id="remote-videos"></div>
+        </div>
+        <div id="chat-container">
+            <div id="chat-messages"></div>
+            <input type="text" id="chat-input" placeholder="Type a message..." />
+            <button id="send-chat">Send</button>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
